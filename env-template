@@ -1,0 +1,5 @@
+OPENAI_KEY=
+OPENAI_URL=https://api.openai.com
+OPENAI_COMPLETION=${OPENAI_URL}/v1/chat/completions
+
+>>> Created to give the template of the .env file, since that file will be in the GitIngnore file (https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
