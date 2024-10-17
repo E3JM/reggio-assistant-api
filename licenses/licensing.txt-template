@@ -1,3 +1,18 @@
-API_KEY_1
-API_KEY_2
-API_KEY_3
+{
+  "licenses": [
+    {
+      "license": {
+        "apiKey": "your-first-api-key-here",
+        "customerName": "John Doe",
+        "expirationDate": "2024-12-31"
+      }
+    },
+    {
+      "license": {
+        "apiKey": "your-second-api-key-here",
+        "customerName": "Jane Smith",
+        "expirationDate": "2025-06-30"
+      }
+    }
+  ]
+}

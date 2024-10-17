@@ -1,7 +1,6 @@
-licenses/licensing.txt
+licenses/licensing.json
 #temporary
 chat.py
-API-call.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

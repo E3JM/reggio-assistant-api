@@ -18,10 +18,10 @@ def process_chat_request(prompt):
     
     # response = openai.ChatCompletion.create( #DEPRECATED
     response = client.chat.completions.create(
-    model="gpt-3.5-turbo",
-    messages = chat_messages,
-    temperature=0.7
-    )
+        model="gpt-3.5-turbo",
+        messages = chat_messages,
+        temperature=0.7
+        )
     # Append the response to messages
     #print(response.choices[0].message.content)
     chat_messages.append({"role": "assistant","content": response.choices[0].message.content})
