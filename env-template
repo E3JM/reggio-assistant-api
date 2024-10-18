@@ -1,4 +1,4 @@
 OPENAI_KEY=
-API_KEY_FILE = '/folder/file-name.txt'
+API_KEY_FILE = '/folder/file-name.json'
 >>> Created to give the template of the .env file, since that file will be in the .gitIngnore file
  (https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files)
