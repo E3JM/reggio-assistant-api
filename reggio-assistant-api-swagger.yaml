@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: Reggio Assistant API
+  version: 1.0.0
+  description: API for interacting with the Reggio Assistant chatbot
+
+servers:
+  - url: https://api.example.com/v1
+    description: Production server (uses live data)
+  - url: https://sandbox-api.example.com/v1
+    description: Sandbox server (uses test data)
+
+paths:
+  /reggio_assistant:
+    post:
+      summary: Get a response from the Reggio Assistant
+      description: Send a prompt to the Reggio Assistant and receive a response
+      operationId: reggioAssistant
+      security:
+        - ApiKeyAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                input_text:
+                  type: string
+                  description: The prompt to send to the Reggio Assistant
+              required:
+                - input_text
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  output_text:
+                    type: string
+                    description: The response from the Reggio Assistant
+        '400':
+          description: Bad request - Missing input
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Missing input
+        '401':
+          description: Unauthorized - Invalid or missing API key
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Invalid or missing API key
+
+components:
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: x-api-key
